@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function myFunction() {
+                document.getElementById("test").innerHTML = "Paragraph changed."
+            }
+        </script>
+    </head>
+    <body>
+        <h2>What Can JavaScript Do?</h2>
+
+        <p>JavaScript can change HTML attribute values.</p>
+
+        <p>In this case JavaScript changes the value of the src (source)
+        attribute of an image.</p>
+
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">
+        Turn on the light</button>
+
+        <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">
+        Turn off the light</button>
+
+        <p>
+        <p id="demo">JavaScript can change the style of an HTML element.</p>
+
+        <button type="button" onClick="document.getElementById('demo').style.fontSize='35px'">
+            Big Font
+        </button>
+
+        <button type="button" onClick="document.getElementById('demo').style.fontSize='15px'">
+            Small Font
+        </button>
+        </p>
+
+        <button type="button" onClick="document.getElementById('demo').style.display='none'">
+            Hide
+        </button>
+
+        <button type="button" onClick="document.getElementById('demo').style.display='block'">
+            Show
+        </button>
+
+        <p id="test">
+            A Paragraph
+        </p>
+        <button type="button" onClick="myFunction()">Try it</button>
+
+        <h2>External JavaScript</h2>
+        <p id="external">A Paragraph.</p>
+
+        <button type="button" onClick="externalFunction()">Try it</button>
+
+        <p> (myFuction is stored in an external file called "myScript.js")</p>
+        <script src="myScript.js"></script>
+    </body>
+</html>
